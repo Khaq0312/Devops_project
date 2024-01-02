@@ -13,12 +13,12 @@ pipeline{
                     git branch: 'main', url: 'https://github.com/Khaq0312/Devops_project.git'
                     }
                 }
-		stage('Login') {
+		// stage('Login') {
 
-			steps {
-				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-			}
-		}
+		// 	steps {
+		// 		sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+		// 	}
+		// }
 		stage('Build') {
 
 			steps {
