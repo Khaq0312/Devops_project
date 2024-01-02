@@ -22,7 +22,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t kysheng/jenkins_test .'
+				sh 'docker build -t hmkhang/jenkins'
 			}
 		}
 		
@@ -37,7 +37,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push kysheng/jenkins_test'
+				sh 'docker push hmkhang/jenkins'
 			}
 		}
 		
@@ -51,7 +51,7 @@ pipeline{
 		stage('Run in Container') {
 
 			steps {
-				sh 'docker run --publish 3000:3000 --name jenkins-mmt -d --rm kysheng/jenkins_test:latest'
+				sh 'docker run --publish 3000:3000 --name jenkins-mmt -d --rm hmkhang/jenkins:latest'
 			}
 		}
 	}
