@@ -22,7 +22,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t hmkhang/jenkins'
+				sh 'docker build -t hmkhang/jenkins .'
 			}
 		}
 		
